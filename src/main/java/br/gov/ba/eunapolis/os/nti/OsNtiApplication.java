@@ -4,7 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import orm.usuarios;
+import orm.Usuarios;
 import repository.UsuariosRepository;
 
 @SpringBootApplication
@@ -23,7 +23,7 @@ public class OsNtiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		usuarios usuarios = new usuarios();
+		Usuarios usuarios = new Usuarios();
 		
 		usuarios.setUser("anderson");
 		usuarios.setPass("1234");

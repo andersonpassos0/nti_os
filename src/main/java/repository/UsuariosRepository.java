@@ -3,10 +3,10 @@ package repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import orm.usuarios;
+import orm.Usuarios;
 
 @Repository
-public interface UsuariosRepository extends CrudRepository<usuarios, Integer>{
+public interface UsuariosRepository extends CrudRepository<Usuarios, Integer>{
 	
 
 }
