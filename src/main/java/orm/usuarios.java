@@ -1,5 +1,6 @@
 package orm;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,18 +14,39 @@ public class Usuarios {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idusuarios;
+	
+	@Column (name = "user", length = 200, nullable = false)
 	private String user;
+	
+	@Column (name = "pass", length = 100, nullable = false)
 	private String pass;
+
+	@Column (name = "name", length = 200, nullable = false)
 	private String name;
+
+	@Column (name = "email", length = 200, nullable = false)
 	private String email;
+	
 	private int tipo;
+	
 	private int fkTecnico;
+	
 	private String codigo;
+	
 	private String status;
-	private String DsTelefone;
-//	private Date DtNascimento;
+	
+	@Column (name = "DsTelefone", nullable = false)
+	private String dsTelefone;
+	
+//	@Column (name = "DtNascimento", nullable = false)
+//	private Date dtNascimento;
+	
 //	private String acesso;
+	
+	@Column (name = "anexo", length = 150, nullable = false)
 	private String anexo;
+	
+	@Column (name = "location", length = 200, nullable = false)
 	private String location;
 	
 	
@@ -83,10 +105,10 @@ public class Usuarios {
 		this.status = status;
 	}
 	public String getDsTelefone() {
-		return DsTelefone;
+		return dsTelefone;
 	}
 	public void setDsTelefone(String dsTelefone) {
-		DsTelefone = dsTelefone;
+		dsTelefone = dsTelefone;
 	}
 //	public Date getDtNascimento() {
 //		return DtNascimento;
