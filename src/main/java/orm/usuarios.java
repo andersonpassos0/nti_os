@@ -13,7 +13,8 @@ public class Usuarios {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idusuarios;
+	@Column(name = "idusuarios")
+	private Integer idUsuarios;
 	
 	@Column (name = "user", length = 200, nullable = false)
 	private String user;
@@ -51,10 +52,10 @@ public class Usuarios {
 	
 	
 	public Integer getIdusuarios() {
-		return idusuarios;
+		return idUsuarios;
 	}
-	public void setIdusuarios(Integer idusuarios) {
-		this.idusuarios = idusuarios;
+	public void setIdusuarios(Integer idUsuarios) {
+		this.idUsuarios = idUsuarios;
 	}
 	public String getUser() {
 		return user;
@@ -108,7 +109,7 @@ public class Usuarios {
 		return dsTelefone;
 	}
 	public void setDsTelefone(String dsTelefone) {
-		dsTelefone = dsTelefone;
+		this.dsTelefone = dsTelefone;
 	}
 //	public Date getDtNascimento() {
 //		return DtNascimento;
